@@ -1,0 +1,3 @@
+Disallow: /ytpovuie/
+
+Host: https://lesnoidvor.by/
