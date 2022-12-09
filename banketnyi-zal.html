@@ -215,29 +215,6 @@
 
     </div>
 </div>
-<script>
-    $('a.gallery-img').nivoLightbox({
-        effect: 'fadeScale',
-        theme: 'default',
-        keyboardNav: true,
-        clickOverlayToClose: true,
-        onInit: function () {
-        },
-        beforeShowLightbox: function () {
-        },
-        afterShowLightbox: function (lightbox) {
-        },
-        beforeHideLightbox: function () {
-        },
-        afterHideLightbox: function () {
-        },
-        onPrev: function (element) {
-        },
-        onNext: function (element) {
-        },
-        errorMessage: 'При загрузке возникли ошибки. Попробуйте еще раз'
-    });
-</script>
 <div class="clr"></div>
 <footer>
     <div class="site-box">
@@ -296,58 +273,11 @@
     </div>
 </footer>
 <script src="js/script.js"></script>
+<script src="js/burger.js"></script>
+
 </body>
 </html>
 
-<script type="text/javascript">
-    (function (d, w, c) {
-        (w[c] = w[c] || []).push(function () {
-            try {
-                w.yaCounter25682936 = new Ya.Metrika({
-                    id: 25682936,
-                    webvisor: true,
-                    clickmap: true,
-                    trackLinks: true,
-                    accurateTrackBounce: true
-                });
-            } catch (e) {
-            }
-        });
 
-        var n = d.getElementsByTagName("script")[0],
-            s = d.createElement("script"),
-            f = function () {
-                n.parentNode.insertBefore(s, n);
-            };
-        s.type = "text/javascript";
-        s.async = true;
-        s.src = (d.location.protocol == "https:" ? "https:" : "http:") + "//mc.yandex.ru/metrika/watch.js";
 
-        if (w.opera == "[object Opera]") {
-            d.addEventListener("DOMContentLoaded", f, false);
-        } else {
-            f();
-        }
-    })(document, window, "yandex_metrika_callbacks");
-</script>
 
-<noscript>
-    <div><img src="https://mc.yandex.ru/watch/25682936" style="position:absolute; left:-9999px;" alt=""/></div>
-</noscript>
-
-<script>
-    $('.menu .burger').click(function () {
-        if ($(this).hasClass('active')) {
-            $(this).removeClass('active');
-            $('.menu ul').removeClass('active');
-        } else {
-            $(this).addClass('active');
-            $('.menu ul').addClass('active');
-        }
-
-    });
-</script>
-
-</body>
-
-</html>

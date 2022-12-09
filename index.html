@@ -112,7 +112,6 @@
         });
     });
 </script>
-<div class="clr"></div>
 <div class="site-box center-box">
     <div class="clr"></div>
     <h2>Наши услуги</h2>
@@ -172,7 +171,6 @@
             </a>
             <span class="right"></span>
         </div>
-        <div class="clr"></div>
     </div>
     <div class="our">
         <div class="our-item">
@@ -362,10 +360,12 @@
                     <span>Оплата</span>
                 </a><span class="menu-line">|</span></li>
             </ul>
-            <p>Все права защищены &copy;<a alt="Усадьба Лесной Двор | Усадьбы в Могилеве" title="Лесной Двор"
-                                           href="index.html">Лесной Двор</a> 2012-2022</p>
-            <p><img style="height: 25px;" src="images/payment/all_payment_logo_transparent.png"><a
-                    href="https://artpay.by" target="_blank">
+            <p>Все права защищены &copy;
+                <a alt="Усадьба Лесной Двор | Усадьбы в Могилеве" title="Лесной Двор"
+                   href="index.html">Лесной Двор</a> 2012-2022</p>
+            <p>
+                <img style="height: 25px;" src="images/payment/all_payment_logo_transparent.png">
+                <a href="https://artpay.by" target="_blank">
                 <img style="height: 25px;" src="images/payment/artpay_transparent.png"></a>
             </p>
         </div>
@@ -378,80 +378,5 @@
     </div>
 </footer>
 <script src="js/script.js"></script>
-</body>
-</html>
-
-<script type="text/javascript">
-    $(".slider-wrapper").smoothDivScroll({
-        mousewheelScrolling: "allDirections",
-        manualContinuousScrolling: true,
-        autoScrollingMode: "onStart"
-    });
-    $('.scrollableArea').css({'width': '4400px !important'});
-    $('.scrollWrapper').hover(function () {
-
-        var width_bloack = $('.scrollableArea').width();
-        if (!width_bloack) {
-            $('.scrollableArea').css({'background': 'none'});
-            $('.scrollableArea').css({'width': '4400px'});
-            $(".slider-wrapper").smoothDivScroll({
-                mousewheelScrolling: "allDirections",
-                manualContinuousScrolling: true,
-                autoScrollingMode: "onStart"
-            });
-            $('.scrollableArea').css({'width': '4400px'});
-        }
-
-    })
-</script>
-
-<!-- Yandex.Metrika counter -->
-<script type="text/javascript">
-    (function (d, w, c) {
-        (w[c] = w[c] || []).push(function () {
-            try {
-                w.yaCounter25682936 = new Ya.Metrika({
-                    id: 25682936,
-                    webvisor: true,
-                    clickmap: true,
-                    trackLinks: true,
-                    accurateTrackBounce: true
-                });
-            } catch (e) {
-            }
-        });
-
-        var n = d.getElementsByTagName("script")[0],
-            s = d.createElement("script"),
-            f = function () {
-                n.parentNode.insertBefore(s, n);
-            };
-        s.type = "text/javascript";
-        s.async = true;
-        s.src = (d.location.protocol == "https:" ? "https:" : "http:") + "//mc.yandex.ru/metrika/watch.js";
-
-        if (w.opera == "[object Opera]") {
-            d.addEventListener("DOMContentLoaded", f, false);
-        } else {
-            f();
-        }
-    })(document, window, "yandex_metrika_callbacks");
-</script>
-<noscript>
-    <div><img src="https://mc.yandex.ru/watch/25682936" style="position:absolute; left:-9999px;" alt=""/></div>
-</noscript>
-<!-- /Yandex.Metrika counter -->
-<script>
-    $('.menu .burger').click(function () {
-        if ($(this).hasClass('active')) {
-            $(this).removeClass('active');
-            $('.menu ul').removeClass('active');
-        } else {
-            $(this).addClass('active');
-            $('.menu ul').addClass('active');
-        }
-
-    });
-</script>
 </body>
 </html>

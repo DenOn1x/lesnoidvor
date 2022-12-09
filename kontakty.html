@@ -103,15 +103,12 @@
     var myMap,
         myPlacemark,
         s;
-
     function init() {
         myMap = new ymaps.Map("map", {
             center: [53.984568, 30.313601],
             zoom: 15,
-
             type: "yandex#publicMapHybrid",
-            behaviors: ["default", "scrollZoom"],
-        }, {
+            behaviors: ["default", "scrollZoom"],}, {
             maxAnimationZoomDifference: 0,
             minZoom: 13,
             maxZoom: 17,
@@ -120,12 +117,8 @@
             left: '35px'
         });
         myMap.controls.add('typeSelector');
-
-
         myPlacemark = new ymaps.Placemark([53.984568, 30.313601], {
-
-            iconContent: "<p class='map-name' style='margin:60px 0 0 -62px; display:none;'>Усадьба<br> \"Лесной Двор\"</p>"
-        }, {
+            iconContent: "<p class='map-name' style='margin:60px 0 0 -62px; display:none;'>Усадьба<br> \"Лесной Двор\"</p>"}, {
             iconImageHref: '/img/map2.png',
             iconImageSize: [82, 110],
             iconImageOffset: [-80, -98],
@@ -254,14 +247,6 @@
     </div>
 </footer>
 <script src="js/script.js"></script>
+<script src="js/burger.js"></script>
 </body>
-
-</html>
-
-
-<script>
-
-</script>
-</body>
-
 </html>
