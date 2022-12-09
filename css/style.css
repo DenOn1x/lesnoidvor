@@ -266,6 +266,12 @@ a.logo {
 .item.first-item a {
 
 }
+.main__video-control{
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+    height: 600px;
+}
 
 .item a {
     padding-left: 5px;
@@ -783,7 +789,7 @@ p.text {
     margin: 20px 0;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: flex-start;
 }
 
 .gallery-item {
@@ -793,7 +799,9 @@ p.text {
 
 .gallery-item img {
     width: 210px;
-    height: 150px;
+    height: 130px;
+    object-fit: cover;
+    object-position: center;
     display: block;
     border: 5px #fff solid;
     box-shadow: 0 0 3px rgba(0, 0, 0, 0.5);
@@ -803,11 +811,12 @@ p.text {
 
 .gallery.g2 .gallery-item {
     height: 155px;
-    display: block;
+    display: flex;
+    justify-content: center;
 }
 
 .gallery.g2 {
-    margin: 0;
+    margin-bottom: 40px;
 }
 
 .text-box-item {
@@ -2015,8 +2024,9 @@ div.text p, div.text h2, div.text h3 {
     }
 }
 
-@media screen and (max-width: 450px) {
+@media screen and (max-width: 704px) {
     .gallery {
         justify-content: center;
     }
 }
+
