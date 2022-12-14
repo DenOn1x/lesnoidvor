@@ -43,17 +43,35 @@
                 <img src="img/logo.png" title="Усадьба Лесной Двор" alt="Усадьба Лесной Двор">
             </a>
             <div class="social-block">
-                <p class="phone">+375 (29) 2-425-425 </p>
-                <a href="kontakty.html#ancmap">Могилевская область, 3км от города в направлении Шклова </a>
+                <div class="social-box">
+                    <p class="phone">+375 (29) 2-425-425 </p>
+                    <div class="social-box-icons">
+                        <a href="#" class="icon-whatsapp-link">
+                            <img src="img/social-icons/whatsapp.svg" alt="wa" class="whatsapp-img">
+                        </a>
+                        <a href="#" class="icon-viber-link">
+                            <img src="img/social-icons/viber.svg" alt="vb" class="viber-img">
+                        </a>
+                        <a href="#" class="icon-inst-link">
+                            <img src="img/social-icons/instagram.svg" alt="in" class="instagram-img">
+                        </a>
+                        <a href="#" class="icon-vk-link">
+                            <img src="img/social-icons/vk.svg" alt="wk" class="wk-img">
+                        </a>
+                    </div>
+
+                </div>
+                <a href="kontakty.html#ancmap" class="social-text">Могилевская область, 3км от города в направлении
+                    Шклова </a>
             </div>
         </div>
     </div>
     <div class="slider ">
         <div class="video-container">
             <video class="main__video-control"
-                   autoplay loop muted
-                   poster="poster.png">
-                <source src="img/videoplayback.mp4" type="video/mp4">
+                   autoplay
+                   poster="">
+                <source src="img/lesnoy_main_min.mp4" type="video/mp4">
                 <p>Ваш браузер не поддерживает видео. Перейти <a href="#"> для просмотра</a>
                 </p>
             </video>
@@ -106,7 +124,6 @@
     <h2>Наши услуги</h2>
     <div class="clr"></div>
     <div class="our">
-
         <div class="our-item">
             <div class="our-item-img">
                 <a href="vyezdnaya-rospis.html" alt="Выездная роспись" title="Выездная роспись">
@@ -256,6 +273,8 @@
             есть и большой джакузи, где вы можете приятно расслабиться под нежными струями воды.<br>&nbsp;<span
                     class="Apple-tab-span" style="white-space:pre">	</span>«Наша баня взбодрит вам и тело, и дух!» –
             с таким девизом мы создаем все условия для вашего оздоровительного отдыха.</p>
+        <span id="points">...</span>
+        <span id="moreText" style="display: none">
         <p><br>&nbsp;Беседки</p>
         <p><br>&nbsp;<span class="Apple-tab-span" style="white-space:pre">	</span>Также недалеко от бани расположены
             комфортабельные беседки, стоящие в окружении высоких елей. Это отличное место, чтобы расслабиться, полной
@@ -305,67 +324,101 @@
             сдаются в аренду, как молодоженам, так и семьям с детьми или просто дружным компаниям, которые хотят
             отдохнуть в дали от суетливых и шумных городов.</p>
         <p><br>&nbsp;Звоните нам, чтобы забронировать дом, баню или банкетный зал!<br></p>
+        </span>
+        <button onclick="toggleText()" id="textButton" class="show-more-btn">
+            Читать далее
+        </button>
         </p>
 
+        <div class="video-container">
+            <video class="main__video-control"
+                   autoplay="autoplay"
+                   poster="">
+                <source src="img/lesnoy_main_min.mp4" type="video/mp4">
+                <p>Ваш браузер не поддерживает видео. Перейти <a href="#"> для просмотра</a>
+                </p>
+            </video>
+        </div>
+        <div style="position:relative;overflow:hidden;"><a
+                href="https://yandex.by/maps/org/usadba_lesnoy_dvor/1188269223/?utm_medium=mapframe&utm_source=maps"
+                style="color:#eee;font-size:12px;position:absolute;top:0px;">Усадьба Лесной двор</a><a
+                href="https://yandex.by/maps/29629/mogilev-district/category/resort/184106400/?utm_medium=mapframe&utm_source=maps"
+                style="color:#eee;font-size:12px;position:absolute;top:14px;">Дом отдыха в Могилёвской области</a><a
+                href="https://yandex.by/maps/29629/mogilev-district/category/tourist_resort/184106426/?utm_medium=mapframe&utm_source=maps"
+                style="color:#eee;font-size:12px;position:absolute;top:28px;">Турбаза в Могилёвской области</a>
+            <iframe src="https://yandex.by/map-widget/v1/-/CCUjJTvaDA" width="560" height="400" frameborder="1"
+                    allowfullscreen="true" style="position:relative;"></iframe>
+        </div>
     </div>
 </div>
 
 <div class="clr"></div>
 <footer>
-    <div class="site-box">
-        <div class="bottom-menu">
-            <ul>
-                <li class="  active first-item">
-                    <a href="index.html" title="Главная">
-                        <span>Главная</span>
-                    </a>
-                    <span class="menu-line">|</span>
-                </li>
-                <li class="   ">
-                    <a href="fotogalereya.html" title="Фотогалерея">
-                        <span>Фотогалерея</span>
-                    </a>
-                    <span class="menu-line">|</span>
-                </li>
-                <li class="   ">
-                    <a href="otzyvy.html" title="Отзывы">
-                        <span>Отзывы</span>
-                    </a>
-                    <span class="menu-line">|</span>
-                </li>
-                <li class="   ">
-                    <a href="novosti.html" title="Наши мероприятия">
-                        <span>Наши мероприятия</span>
-                    </a>
-                    <span class="menu-line">|</span>
-                </li>
-                <li class="   ">
-                    <a href="kontakty.html" title="Контакты">
-                        <span>Контакты</span>
-                    </a>
-                    <span class="menu-line">|</span>
-                </li>
-                <li><a href="index.html@payment.html" title="Оплата">
-                    <span>Оплата</span>
-                </a><span class="menu-line">|</span></li>
-            </ul>
-            <p>Все права защищены &copy;
-                <a alt="Усадьба Лесной Двор | Усадьбы в Могилеве" title="Лесной Двор"
-                   href="index.html">Лесной Двор</a> 2012-2022</p>
-            <p>
-                <img style="height: 25px;" src="images/payment/all_payment_logo_transparent.png">
-                <a href="https://artpay.by" target="_blank">
-                <img style="height: 25px;" src="images/payment/artpay_transparent.png"></a>
-            </p>
+    <div class="footer-wrapper">
+        <div class="site-box">
+            <div class="bottom-menu">
+                <ul>
+                    <li class="  active first-item">
+                        <a href="index.html" title="Главная">
+                            <span>Главная</span>
+                        </a>
+                        <span class="menu-line">|</span>
+                    </li>
+                    <li class="   ">
+                        <a href="fotogalereya.html" title="Фотогалерея">
+                            <span>Фотогалерея</span>
+                        </a>
+                        <span class="menu-line">|</span>
+                    </li>
+                    <li class="   ">
+                        <a href="otzyvy.html" title="Отзывы">
+                            <span>Отзывы</span>
+                        </a>
+                        <span class="menu-line">|</span>
+                    </li>
+                    <li class="   ">
+                        <a href="novosti.html" title="Наши мероприятия">
+                            <span>Наши мероприятия</span>
+                        </a>
+                        <span class="menu-line">|</span>
+                    </li>
+                    <li class="   ">
+                        <a href="kontakty.html" title="Контакты">
+                            <span>Контакты</span>
+                        </a>
+                        <span class="menu-line">|</span>
+                    </li>
+                    <li><a href="index.html@payment.html" title="Оплата">
+                        <span>Оплата</span>
+                    </a><span class="menu-line">|</span></li>
+                </ul>
+                <p>Все права защищены &copy;
+                    <a alt="Усадьба Лесной Двор | Усадьбы в Могилеве" title="Лесной Двор"
+                       href="index.html">Лесной Двор</a> 2012-2022</p>
+                <p>
+                    <img style="height: 25px;" src="images/payment/all_payment_logo_transparent.png">
+                    <a href="https://artpay.by" target="_blank">
+                        <img style="height: 25px;" src="images/payment/artpay_transparent.png"></a>
+                </p>
+            </div>
         </div>
-        <div class="developer">
-            <a href="http://promicom.by" class="promicom" target="_blank"
-               title="Digital агентство Промиком. Разработка продающих сайтов">Digital агентство Промиком. Разработка и
-                продвижение продающих сайтов</a>
-        </div>
-
     </div>
+    <div class="footer-bottom">
+        <div class="footer-container">
+            <div class="footer-bottom-copy">
+                © Лесной Двор, 2012-2022. Все права защищены
+            </div>
+            <div class="footer-bottom-logo">
+                <a href="http://promicom.by" class="promicom" target="_blank"
+                   title="Digital агентство Промиком. Разработка продающих сайтов">
+                    <img src="img/promicom.svg" alt="img-footer" class="footer-bottom-img">
+                </a>
+            </div>
+        </div>
+    </div>
+
 </footer>
+<script src="js/burger.js"></script>
 <script src="js/script.js"></script>
 </body>
 </html>

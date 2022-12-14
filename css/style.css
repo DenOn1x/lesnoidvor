@@ -22,6 +22,11 @@
     font-family: CLEARSANS-LIGHT;
     src: url(fonts/CLEARSANS-LIGHT.TTF);
 }
+@font-face {
+    font-family: ClearSans-Regular;
+    src: url(fonts/ClearSans-Regular.ttf);
+}
+
 
 * {
     margin: 0;
@@ -125,14 +130,8 @@ input {
 }
 
 .logo-car {
-    background: url('../img/logo-car.png') no-repeat;
-    /*width: 782px;*/
     width: 80%;
     height: 102px;
-    position: relative;
-    left: 0;
-    top: 0;
-    background-size: 100%;
 
 }
 
@@ -270,7 +269,7 @@ a.logo {
     width: 100%;
     object-fit: cover;
     object-position: center;
-    height: 600px;
+    height: 650px;
 }
 
 .item a {
@@ -435,9 +434,7 @@ a.logo {
 .our {
     display: flex;
     justify-content: space-between;
-    flex-wrap: wrap;
     width: 100%;
-    position: relative;
     margin: 0 auto;
 }
 
@@ -570,8 +567,6 @@ a.logo {
 .about {
     position: relative;
     padding: 25px 0;
-    background: url('../img/about-bg.jpg') no-repeat;
-    background-position: 333px bottom;
 }
 
 .about.page {
@@ -636,11 +631,32 @@ p.text {
 }
 
 footer {
+    display: flex;
+    flex-direction: column;
+    /*padding-bottom: 15px;*/
+}
+.footer-container{
+    width: 100%;
+    margin: 0 auto;
+    max-width: 960px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 0;
+}
+.footer-wrapper{
     background: url('../img/footer-bg.jpg') repeat;
     box-shadow: 0 0 15px rgba(30, 30, 30, 1) inset, 0 0 10px rgba(30, 30, 30, 1) inset, 0 0 5px rgba(20, 20, 20, 1) inset;
-    padding-bottom: 15px;
 }
 
+.footer-bottom-copy{
+    font-family: 'Clear Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: #000000;
+}
 footer .site-box {
     align-items: center;
 }
@@ -677,6 +693,24 @@ footer .site-box {
     color: #fff;
     font-size: 1.25em;
 }
+
+.show-more-btn{
+    font-family: 'ClearSans-Regular';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 21px;
+    letter-spacing: -0.02em;
+    text-decoration-line: underline;
+    color: #1F7911;
+    border: none;
+    background: none;
+    display: flex;
+    justify-content: center;
+    margin: 20px auto;
+    cursor: pointer;
+}
+
 
 footer p {
     color: #fff;
@@ -848,31 +882,61 @@ p.reviews {
 }
 
 .social-block {
-    right: -15px;
-    width: 180px;
     font-size: 1em;
+    margin: 20px ;
 }
 
 .social-block p.phone {
-    font-size: 1.0em;
-    text-align: right;
+    font-family: 'ClearSans-Regular';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 20px;
     color: #1F7911;
-    font-weight: bold;
-    margin: 10px 0 0 0;
-    background: none;
-    padding: 0;
+    white-space: nowrap;
 }
-
-.social-block a {
-    font-size: 0.8em;
-    margin: 10px 0 0;
-    background: url('../img/map.png') no-repeat;
-    padding: 0 0 0 30px;
-    background-position: 0 center;
-    float: right;
-    color: #1F7911;
+.social-text{
+    width: 240px;
+    font-family: 'ClearSans-Regular';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 18px;
+    text-decoration-line: underline;
+    color: #000000;
+    display: flex;
+    margin-top: 10px;
 }
-
+.social-box{
+    display: flex;
+    align-items: center;
+}
+.social-box-icons{
+    display: flex;
+    align-items: center;
+    margin-left: 10px;
+}
+.icon-whatsapp-link,.icon-viber-link,.icon-inst-link,.icon-vk-link{
+    border-radius: 14px;
+    width: 24px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 2px 0 2px;
+}
+.icon-whatsapp-link{
+    background: #29A71A;
+}
+.icon-viber-link{
+    background: #6F3FAA;
+}
+.icon-inst-link{
+    background: linear-gradient(45deg, #FEE411 11.93%, #FEDB16 15.61%, #FEC125 21.74%, #FE983D 29.56%, #FE5F5E 38.66%, #FE2181 47.46%, #9000DC 82.98%);
+}
+.icon-vk-link{
+    background: #0077FF;
+}
 .soclink {
     background: url('../img/social.png') no-repeat;
     width: 16px;
@@ -1021,7 +1085,7 @@ p.reviews {
 }
 
 .contacts-phone {
-    background: url('https://lesnoidvor.by/img/phone_b.png') no-repeat;
+    /*background: url('https://lesnoidvor.by/img/phone_b.png') no-repeat;*/
     background-position: 0 50%;
     padding: 10px 30px;
     font-size: 2em;
@@ -1755,13 +1819,7 @@ div.text p, div.text h2, div.text h3 {
 }
 
 .promicom {
-    background: url('../img/promicom.png') no-repeat;
-    height: 75px;
-    width: 154px;
-    text-indent: -9999px;
-    display: block;
-    margin-top: 7px;
-    background-position: 0 100%;
+
 }
 
 .promicom:hover {

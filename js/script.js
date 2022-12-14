@@ -237,34 +237,34 @@ function setCookie(name, value, options) {
     document.cookie = updatedCookie;
 }
 
-$('a.gallery-img').nivoLightbox({
-    effect: 'fadeScale',
-    theme: 'default',
-    keyboardNav: true,
-    clickOverlayToClose: true,
-    onInit: function () {},
-    beforeShowLightbox: function () {},
-    afterShowLightbox: function (lightbox) {},
-    beforeHideLightbox: function () {},
-    afterHideLightbox: function () {},
-    onPrev: function (element) {},
-    onNext: function (element) {},
-    errorMessage: 'При загрузке возникли ошибки. Попробуйте еще раз'
-});
-$('a.gallery-item').nivoLightbox({
-    effect: 'fadeScale',
-    theme: 'default',
-    keyboardNav: true,
-    clickOverlayToClose: true,
-    onInit: function () {},
-    beforeShowLightbox: function () {},
-    afterShowLightbox: function (lightbox) {},
-    beforeHideLightbox: function () {},
-    afterHideLightbox: function () {},
-    onPrev: function (element) {},
-    onNext: function (element) {},
-    errorMessage: 'При загрузке возникли ошибки. Попробуйте еще раз'
-});
+// $('a.gallery-img').nivoLightbox({
+//     effect: 'fadeScale',
+//     theme: 'default',
+//     keyboardNav: true,
+//     clickOverlayToClose: true,
+//     onInit: function () {},
+//     beforeShowLightbox: function () {},
+//     afterShowLightbox: function (lightbox) {},
+//     beforeHideLightbox: function () {},
+//     afterHideLightbox: function () {},
+//     onPrev: function (element) {},
+//     onNext: function (element) {},
+//     errorMessage: 'При загрузке возникли ошибки. Попробуйте еще раз'
+// });
+// $('a.gallery-item').nivoLightbox({
+//     effect: 'fadeScale',
+//     theme: 'default',
+//     keyboardNav: true,
+//     clickOverlayToClose: true,
+//     onInit: function () {},
+//     beforeShowLightbox: function () {},
+//     afterShowLightbox: function (lightbox) {},
+//     beforeHideLightbox: function () {},
+//     afterHideLightbox: function () {},
+//     onPrev: function (element) {},
+//     onNext: function (element) {},
+//     errorMessage: 'При загрузке возникли ошибки. Попробуйте еще раз'
+// });
 
 $(".slider-wrapper").smoothDivScroll({
     mousewheelScrolling: "allDirections",
@@ -288,3 +288,21 @@ $('.scrollWrapper').hover(function () {
 
 })
 
+function toggleText() {
+    var points =
+        document.getElementById("points");
+    var showMoreText =
+        document.getElementById("moreText");
+    var buttonText =
+        document.getElementById("textButton");
+    if (points.style.display === "none") {
+        showMoreText.style.display = "none";
+        points.style.display = "inline";
+        buttonText.innerHTML = "Читать далее";
+    }
+    else {
+        showMoreText.style.display = "inline";
+        points.style.display = "none";
+        buttonText.innerHTML = "Убрать";
+    }
+}
