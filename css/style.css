@@ -91,7 +91,9 @@ img {
 input {
     vertical-align: middle;
 }
-
+.title-card{
+    margin-top: 10px;
+}
 .site {
     height: 100%;
     width: 90%;
