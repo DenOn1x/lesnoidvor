@@ -306,3 +306,42 @@ function toggleText() {
         buttonText.innerHTML = "Убрать";
     }
 }
+
+function toggleImage() {
+    let pointsImg =
+        document.getElementById("points-img");
+    let showMoreText =
+        document.getElementById("moreImage");
+    let buttonText =
+        document.getElementById("imageButton");
+    if (pointsImg.style.display === "none") {
+        showMoreText.style.display = "none";
+        pointsImg.style.display = "inline";
+        buttonText.innerHTML = "Показать еще";
+    }
+    else {
+        showMoreText.style.display = "inline";
+        pointsImg.style.display = "none";
+        buttonText.innerHTML = "Скрыть";
+    }
+}
+
+// if(document.querySelector("[data-player='banner']")){
+// }
+let player = document.querySelector("[data-player='banner']")
+if(player){
+    document.querySelector("[data-player='play']").addEventListener('click', (e)=>{
+        if(player.paused){
+            player.play();
+            e.target.classList.add('pause')
+            e.target.closest('.banner-video').classList.add('banner-video--pause')
+        }else {
+            player.pause();
+            if(e.target.classList.contains('pause')){
+                e.target.classList.remove('pause')
+                e.target.closest('banner-video').classList.remove('banner-video--pause')
+            }
+
+        }
+    })
+}

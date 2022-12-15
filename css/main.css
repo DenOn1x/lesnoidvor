@@ -5,10 +5,6 @@
         background-repeat: no-repeat;
     }
 
-    .our-item {
-        width: 50%;
-    }
-
     .site-box h2:before, .site-box h2:after {
         display: none;
     }
