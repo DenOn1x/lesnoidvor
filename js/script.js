@@ -266,11 +266,6 @@ function setCookie(name, value, options) {
 //     errorMessage: 'При загрузке возникли ошибки. Попробуйте еще раз'
 // });
 
-$(".slider-wrapper").smoothDivScroll({
-    mousewheelScrolling: "allDirections",
-    manualContinuousScrolling: true,
-    autoScrollingMode: "onStart"
-});
 $('.scrollableArea').css({'width': '4400px !important'});
 $('.scrollWrapper').hover(function () {
 
@@ -340,6 +335,25 @@ if(player){
             if(e.target.classList.contains('pause')){
                 e.target.classList.remove('pause')
                 e.target.closest('banner-video').classList.remove('banner-video--pause')
+            }
+
+        }
+    })
+}
+
+
+let player1 = document.querySelector("[data-player='banner-1']")
+if(player1){
+    document.querySelector("[data-player='play-1']").addEventListener('click', (e)=>{
+        if(player1.paused){
+            player1.play();
+            e.target.classList.add('pause')
+            e.target.closest('.banner-video').classList.add('banner-1-video--pause')
+        }else {
+            player1.pause();
+            if(e.target.classList.contains('pause')){
+                e.target.classList.remove('pause')
+                e.target.closest('banner-video').classList.remove('banner-1-video--pause')
             }
 
         }
