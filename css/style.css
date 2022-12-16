@@ -124,21 +124,17 @@ input {
     .banner-video__play{
         left: 42%;
     }
-    .banner-video__play-1{
-        top: 60% !important;
-        left: 42% !important;
-    }
 }
 @media (min-width: 800px) {
     .banner-video__play{
         left: 48%;
     }
+}
+@media (max-width: 480px) {
     .banner-video__play-1{
-        top: 50% !important;
-        left: 50% !important;
+        left: 42% !important;
     }
 }
-
 .banner-video__play-1{
     background: #1F7911;
     border: 4px solid #358628;
@@ -150,7 +146,7 @@ input {
     height: 64px;
     position: absolute;
     top: 50%;
-    left: 50%;
+    left: 48%;
     cursor: pointer;
 }
 .video-arrow-bottom{
@@ -215,22 +211,22 @@ input {
     }
 }
 
-@media (min-width: 1600px) {
-    .logo-forest {
-        width: 30%;
-        left: 32%;
-        top: 5%;
-        height: 90px;
-        object-position: center;
-        object-fit: cover;
-    }
+@media (min-width: 992px) {
+    .logo-forest{
+        width: 40%;
+        left: 25%;
 
+    }
     .social-block {
         width: 20%;
         margin: 20px;
     }
 }
-
+.video-arrow-bottom{
+    padding-left: 4px;
+    width: 20px;
+    height: 20px;
+}
 a.logo {
     cursor: pointer;
     display: block;
@@ -568,13 +564,28 @@ a.logo {
 }
 
 .our-item h1 {
+    font-family: 'ClearSans-Regular';
+    font-weight: 400;
     color: #4f2612;
     font-size: 1.5625em;
-    font-weight: 100;
     line-height: 20px;
     -webkit-transition: all 1s ease;
     -moz-transition: all 1s ease;
     -o-transition: all 1s ease;
+}
+@media (max-width: 560px) {
+    .about-img{
+        display: none;
+    }
+    .about-title{
+        padding: 0 !important;
+        font-family: 'ClearSans-Regular';
+    }
+   .about-text{
+       font-family: 'ClearSans-Regular';
+       font-weight: 400;
+
+   }
 }
 
 .our-item-img a {
@@ -1256,8 +1267,8 @@ p.reviews {
 
 .icon-whatsapp-link, .icon-viber-link, .icon-inst-link, .icon-vk-link {
     border-radius: 14px;
-    width: 24px;
-    height: 24px;
+    width: 28px;
+    height: 28px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -1436,7 +1447,13 @@ p.reviews {
     margin: 0 auto;
     white-space: nowrap;
 }
-
+.bottom-menu li a span{
+    font-family: 'ClearSans-Regular';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 28px;
+}
 .dignity-contacts-adress {
     float: right;
     background: url('../img/map.png') no-repeat;
