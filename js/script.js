@@ -323,23 +323,23 @@ function toggleImage() {
 
 // if(document.querySelector("[data-player='banner']")){
 // }
-let player = document.querySelector("[data-player='banner']")
-if(player){
-    document.querySelector("[data-player='play']").addEventListener('click', (e)=>{
-        if(player.paused){
-            player.play();
-            e.target.classList.add('pause')
-            e.target.closest('.banner-video').classList.add('banner-video--pause')
-        }else {
-            player.pause();
-            if(e.target.classList.contains('pause')){
-                e.target.classList.remove('pause')
-                e.target.closest('banner-video').classList.remove('banner-video--pause')
-            }
-
-        }
-    })
-}
+// let player = document.querySelector("[data-player='banner']")
+// if(player){
+//     document.querySelector("[data-player='play']").addEventListener('click', (e)=>{
+//         if(player.paused){
+//             player.play();
+//             e.target.classList.add('pause')
+//             e.target.closest('.banner-video').classList.add('banner-video--pause')
+//         }else {
+//             player.pause();
+//             if(e.target.classList.contains('pause')){
+//                 e.target.classList.remove('pause')
+//                 e.target.closest('banner-video').classList.remove('banner-video--pause')
+//             }
+//
+//         }
+//     })
+// }
 
 
 let player1 = document.querySelector("[data-player='banner-1']")

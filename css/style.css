@@ -415,7 +415,6 @@ a.logo {
     position: absolute;
     display: block;
     content: '';
-    filter: FlipH;
     -ms-filter: "FlipH";
     background: url(../img/line-brown.png) no-repeat;
     width: 341px;
@@ -515,7 +514,6 @@ a.logo {
     -webkit-transform: scale(-1, 1);
     -o-transform: scale(-1, 1);
     transform: scale(-1, 1);
-    filter: FlipH;
     -ms-filter: "FlipH";
 }
 
@@ -1303,7 +1301,7 @@ p.reviews {
 }
 
 .soclink.vk:hover {
-    background-position: 0 -25;
+    background-position: 0 -25px;
 }
 
 .soclink.fb {
@@ -1311,7 +1309,7 @@ p.reviews {
 }
 
 .soclink.fb:hover {
-    background-position: 0 -25;
+    background-position: 0 -25px;
 }
 
 .soclink.ok {
@@ -1319,7 +1317,7 @@ p.reviews {
 }
 
 .soclink.ok:hover {
-    background-position: 0 -25;
+    background-position: 0 -25px;
 }
 
 
