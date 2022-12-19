@@ -129,7 +129,9 @@ $(document).ready(function () {
     });
     $('a[href^="#"]').click(function () {
         var target = $(this).attr('href');
-        $('html, body').animate({scrollTop: $(target).offset().top}, 300);
+        $('html, body').animate({
+            scrollTop: $(target).offset().top
+        }, 300);
         return false;
     });
 
@@ -141,11 +143,58 @@ $(document).ready(function () {
         }
     });
     $('.button-top').click(function () {
-        $('body,html').animate({scrollTop: 0}, 800);
+        $('body,html').animate({
+            scrollTop: 0
+        }, 800);
     });
 
+    // load photo
 
-});
+    var $grid = $('.column-container').masonry({
+        itemSelector: '.column-container__item',
+        columnWidth: '.column-container__item',
+        percentPosition: true,
+
+    });
+
+    setTimeout(() => {
+        $grid.masonry('layout');
+    }, 300)
+
+    console.log($grid)
+
+
+    $('#imageButton').on('click', function (event) {
+
+        $.ajax({
+            type: "GET",
+            url: "/_gallery.html",
+            data: {
+                page: 1
+            },
+
+            success: function (response) {
+                let div = document.createElement('div')
+                div.innerHTML = response
+
+                let elements = div.querySelectorAll('.column-container__item')
+                $grid.append(elements).masonry('appended', elements);
+
+                $('a.gallery-item').nivoLightbox({
+                    effect: 'fadeScale',
+                    theme: 'default',
+                    keyboardNav: true,
+                    clickOverlayToClose: true,
+                    errorMessage: 'При загрузке возникли ошибки. Попробуйте еще раз'
+                });
+
+            }
+        });
+
+    })
+
+
+}); //ready
 
 
 function number() {
@@ -198,10 +247,16 @@ function send(type) {
                 $('#order_phone').addClass('hide');
             }
             if (type == 'rew') {
-                setCookie('s__r', '1', {expires: 5700, path: "/"});
+                setCookie('s__r', '1', {
+                    expires: 5700,
+                    path: "/"
+                });
                 $('.message-form').html('<p>Спасибо! Ваш отзыв отправлен на модерацию. Нам очень важно Ваше мнение.</p>');
             } else {
-                setCookie('s__m', '1', {expires: 600, path: "/"});
+                setCookie('s__m', '1', {
+                    expires: 600,
+                    path: "/"
+                });
                 $('.message-form').html('<p>Спасибо! Ваше письмо отправлено. Ближайшее время с Вами свяжутся представители нашей компании.</p>');
             }
         }
@@ -251,34 +306,43 @@ function setCookie(name, value, options) {
 //     onNext: function (element) {},
 //     errorMessage: 'При загрузке возникли ошибки. Попробуйте еще раз'
 // });
-// $('a.gallery-item').nivoLightbox({
-//     effect: 'fadeScale',
-//     theme: 'default',
-//     keyboardNav: true,
-//     clickOverlayToClose: true,
-//     onInit: function () {},
-//     beforeShowLightbox: function () {},
-//     afterShowLightbox: function (lightbox) {},
-//     beforeHideLightbox: function () {},
-//     afterHideLightbox: function () {},
-//     onPrev: function (element) {},
-//     onNext: function (element) {},
-//     errorMessage: 'При загрузке возникли ошибки. Попробуйте еще раз'
-// });
 
-$('.scrollableArea').css({'width': '4400px !important'});
+
+if ($('a').is('a.gallery-item')) {
+    $('a.gallery-item').nivoLightbox({
+        effect: 'fadeScale',
+        theme: 'default',
+        keyboardNav: true,
+        clickOverlayToClose: true,
+        errorMessage: 'При загрузке возникли ошибки. Попробуйте еще раз'
+    });
+}
+
+
+
+
+$('.scrollableArea').css({
+    'width': '4400px !important'
+});
+
 $('.scrollWrapper').hover(function () {
 
     var width_bloack = $('.scrollableArea').width();
     if (!width_bloack) {
-        $('.scrollableArea').css({'background': 'none'});
-        $('.scrollableArea').css({'width': '4400px'});
+        $('.scrollableArea').css({
+            'background': 'none'
+        });
+        $('.scrollableArea').css({
+            'width': '4400px'
+        });
         $(".slider-wrapper").smoothDivScroll({
             mousewheelScrolling: "allDirections",
             manualContinuousScrolling: true,
             autoScrollingMode: "onStart"
         });
-        $('.scrollableArea').css({'width': '4400px'});
+        $('.scrollableArea').css({
+            'width': '4400px'
+        });
     }
 
 })
@@ -301,30 +365,31 @@ function toggleText() {
     }
 }
 
-window.onload = function () {
-    let box = document.getElementsByClassName('gallery');
-    let btn = document.getElementById('imageButton');
-    for (let i = 1; i < box.length; i++) {
-        box[i].style.display = "none";
-    }
+// window.onload = function () {
+//     let box = document.getElementsByClassName('gallery');
+//     let btn = document.getElementById('imageButton');
 
-    let countD = 1;
-    btn.addEventListener("click", function () {
-        countD += 1;
-        if (countD <= box.length) {
-            for (let i = 0; i < countD; i++) {
-                box[i].style.display = "flex";
-            }
-        } else if (countD >= box.length) {
-            for (let i = 0; i <= countD; i++) {
-                btn.innerHTML = "Скрыть"
-                box[i + 1].style.display = "none";
-            }
+//     for (let i = 1; i < box.length; i++) {
+//         box[i].style.display = "none";
+//     }
 
-        }
+//     let countD = 1;
+//     btn.addEventListener("click", function () {
+//         countD += 1;
+//         if (countD <= box.length) {
+//             for (let i = 0; i < countD; i++) {
+//                 box[i].style.display = "flex";
+//             }
+//         } else if (countD >= box.length) {
+//             for (let i = 0; i <= countD; i++) {
+//                 btn.innerHTML = "Скрыть"
+//                 box[i + 1].style.display = "none";
+//             }
 
-    })
-}
+//         }
+
+//     })
+// }
 
 // if(document.querySelector("[data-player='banner']")){
 // }
