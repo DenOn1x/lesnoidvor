@@ -294,31 +294,36 @@ function toggleText() {
         showMoreText.style.display = "none";
         points.style.display = "inline";
         buttonText.innerHTML = "Читать далее";
-    }
-    else {
+    } else {
         showMoreText.style.display = "inline";
         points.style.display = "none";
         buttonText.innerHTML = "Убрать";
     }
 }
 
-function toggleImage() {
-    let pointsImg =
-        document.getElementById("points-img");
-    let showMoreText =
-        document.getElementById("moreImage");
-    let buttonText =
-        document.getElementById("imageButton");
-    if (pointsImg.style.display === "none") {
-        showMoreText.style.display = "none";
-        pointsImg.style.display = "inline";
-        buttonText.innerHTML = "Показать еще";
+window.onload = function () {
+    let box = document.getElementsByClassName('gallery');
+    let btn = document.getElementById('imageButton');
+    for (let i = 1; i < box.length; i++) {
+        box[i].style.display = "none";
     }
-    else {
-        showMoreText.style.display = "inline";
-        pointsImg.style.display = "none";
-        buttonText.innerHTML = "Скрыть";
-    }
+
+    let countD = 1;
+    btn.addEventListener("click", function () {
+        countD += 1;
+        if (countD <= box.length) {
+            for (let i = 0; i < countD; i++) {
+                box[i].style.display = "flex";
+            }
+        } else if (countD >= box.length) {
+            for (let i = 0; i <= countD; i++) {
+                btn.innerHTML = "Скрыть"
+                box[i + 1].style.display = "none";
+            }
+
+        }
+
+    })
 }
 
 // if(document.querySelector("[data-player='banner']")){
@@ -343,15 +348,15 @@ function toggleImage() {
 
 
 let player1 = document.querySelector("[data-player='banner-1']")
-if(player1){
-    document.querySelector("[data-player='play-1']").addEventListener('click', (e)=>{
-        if(player1.paused){
+if (player1) {
+    document.querySelector("[data-player='play-1']").addEventListener('click', (e) => {
+        if (player1.paused) {
             player1.play();
             e.target.classList.add('pause')
             e.target.closest('.banner-video').classList.add('banner-1-video--pause')
-        }else {
+        } else {
             player1.pause();
-            if(e.target.classList.contains('pause')){
+            if (e.target.classList.contains('pause')) {
                 e.target.classList.remove('pause')
                 e.target.closest('banner-video').classList.remove('banner-1-video--pause')
             }
