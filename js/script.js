@@ -292,7 +292,6 @@ function setCookie(name, value, options) {
     document.cookie = updatedCookie;
 }
 
-<<<<<<< HEAD
 // $('a.gallery-img').nivoLightbox({
 //     effect: 'fadeScale',
 //     theme: 'default',
@@ -307,8 +306,6 @@ function setCookie(name, value, options) {
 //     onNext: function (element) {},
 //     errorMessage: 'При загрузке возникли ошибки. Попробуйте еще раз'
 // });
-=======
->>>>>>> f63e5545364434cb8fa0aad191e63f09b51255d3
 
 
 if ($('a').is('a.gallery-item')) {
