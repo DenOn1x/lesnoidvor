@@ -130,8 +130,18 @@ input {
         left: 48%;
     }
 }
-@media (max-width: 480px) {
 
+.active{
+    color: black;
+}
+
+a.active {
+    background: #1F7911;
+}
+.link-name{
+    display: flex;
+    text-align: center;
+    align-items: center;
 }
 .banner-video__play-1{
     background: #1F7911;
@@ -144,8 +154,20 @@ input {
     height: 64px;
     position: absolute;
     top: 44%;
-    left: 48%;
+    left: 47%;
     cursor: pointer;
+}
+input[type="checkbox"] {
+    content: url('../img/play.svg');
+    appearance: none;
+    display: block;
+    cursor: pointer;
+    width: 64px;
+    height: 64px;
+}
+
+input[type="checkbox"]:checked {
+    content: url('../img/pause.svg');
 }
 .video-arrow-bottom{
     margin: auto;
@@ -387,7 +409,6 @@ a.logo {
 
 .item a span {
     color: #fff; /* Цвет ссылок */
-    display: table-cell; /* Блочный элемент */
     vertical-align: middle;
     font-family: B20SANS;
     font-size: 1.5em; /* 24/16 */
@@ -891,13 +912,17 @@ footer .site-box {
     width: 100%;
     object-fit: cover;
 }
+.toggle-map{
+    width: 100%;
+    object-fit: cover;
+    height: 480px;
+}
 @media (max-width: 520px) {
-    .video-container-video{
+    .video-container-video,.toggle-map{
         height: 240px;
     }
     .main__video-control-video {
         height: 240px;
-        padding: 10px;
     }
     .banner-video__play-1{
         left: 41%;
