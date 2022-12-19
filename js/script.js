@@ -292,6 +292,7 @@ function setCookie(name, value, options) {
     document.cookie = updatedCookie;
 }
 
+<<<<<<< HEAD
 // $('a.gallery-img').nivoLightbox({
 //     effect: 'fadeScale',
 //     theme: 'default',
@@ -306,6 +307,8 @@ function setCookie(name, value, options) {
 //     onNext: function (element) {},
 //     errorMessage: 'При загрузке возникли ошибки. Попробуйте еще раз'
 // });
+=======
+>>>>>>> f63e5545364434cb8fa0aad191e63f09b51255d3
 
 
 if ($('a').is('a.gallery-item')) {
@@ -391,25 +394,6 @@ function toggleText() {
 //     })
 // }
 
-// if(document.querySelector("[data-player='banner']")){
-// }
-// let player = document.querySelector("[data-player='banner']")
-// if(player){
-//     document.querySelector("[data-player='play']").addEventListener('click', (e)=>{
-//         if(player.paused){
-//             player.play();
-//             e.target.classList.add('pause')
-//             e.target.closest('.banner-video').classList.add('banner-video--pause')
-//         }else {
-//             player.pause();
-//             if(e.target.classList.contains('pause')){
-//                 e.target.classList.remove('pause')
-//                 e.target.closest('banner-video').classList.remove('banner-video--pause')
-//             }
-//
-//         }
-//     })
-// }
 
 
 let player1 = document.querySelector("[data-player='banner-1']")
@@ -418,14 +402,18 @@ if (player1) {
         if (player1.paused) {
             player1.play();
             e.target.classList.add('pause')
-            e.target.closest('.banner-video').classList.add('banner-1-video--pause')
         } else {
             player1.pause();
             if (e.target.classList.contains('pause')) {
                 e.target.classList.remove('pause')
-                e.target.closest('banner-video').classList.remove('banner-1-video--pause')
             }
 
         }
     })
 }
+
+document.querySelectorAll(".item a").forEach((el) => {
+    if (window.location.pathname.indexOf(el.getAttribute("href")) > -1) {
+        el.classList.add("active");
+    }
+});
